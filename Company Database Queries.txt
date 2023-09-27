@@ -1,10 +1,18 @@
 CREATE TABLE emp (empno DECIMAL(4,0) PRIMARY KEY NOT NULL, ename VARCHAR(10), job VARCHAR(9), mgr DECIMAL(4,0), hiredate DATE, sal DECIMAL(7,2), comm DECIMAL(7,2), deptno DECIMAL(2,0));
 
+DESC emp;
+
 CREATE TABLE dept (deptno DECIMAL(2,0) PRIMARY KEY NOT NULL, dname VARCHAR(14), loc VARCHAR(13));
+
+DESC dept;
 
 CREATE TABLE salgrade (grade DECIMAL (1,0), losal DECIMAL(4,0), hisal DECIMAL(4,0));
 
+DESC salgrade;
+
 CREATE TABLE bonus (ename VARCHAR(10), job VARCHAR(9), sal DECIMAL(10,0), comm DECIMAL(10,0));
+
+DESC bonus;
 
 INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES
     (7369, 'SMITH', 'CLERK', 7902, '1980-12-17', 800.00, NULL, 20),
@@ -22,8 +30,18 @@ INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES
     (7902, 'FORD', 'ANALYST', 7566, '1981-12-03', 3000.00, NULL, 20),
     (7934, 'MILLER', 'CLERK', 7782, '1982-01-23',1300.00, NULL, 10);
 
+SELECT * FROM emp;
+
 INSERT INTO dept (deptno, dname, loc) VALUES
     (10, 'ACCOUNTING', 'NEW YORK'),
     (20, 'RESEARCH', 'DALLAS'),
     (30, 'SALES', 'CHICAGO'),
     (40, 'OPERATIONS', 'BOSTON');
+
+SELECT * FROM dept;
+
+INSERT INTO bonus (ename, job, sal, comm) VALUES
+    ('ALLEN', 'SALESMAN', 1600, 300),
+    ('WARD', 'SALESMAN', 1250, 500),
+    ('TURNER', 'SALESMAN', 1500, 0),
+    ('MARTIN', 'SALESMAN', 1250, 1400);

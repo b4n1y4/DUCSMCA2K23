@@ -1,6 +1,6 @@
 CREATE DATABASE company;
 
-use company;
+USE company;
 
 CREATE TABLE emp (empno DECIMAL(4,0) PRIMARY KEY NOT NULL, ename VARCHAR(10), job VARCHAR(9), mgr DECIMAL(4,0), hiredate DATE, sal DECIMAL(7,2), comm DECIMAL(7,2), deptno DECIMAL(2,0));
 

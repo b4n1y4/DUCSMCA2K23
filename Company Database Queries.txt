@@ -45,3 +45,5 @@ INSERT INTO bonus (ename, job, sal, comm) VALUES
     ('WARD', 'SALESMAN', 1250, 500),
     ('TURNER', 'SALESMAN', 1500, 0),
     ('MARTIN', 'SALESMAN', 1250, 1400);
+
+SELECT * FROM bonus;
